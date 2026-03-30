@@ -9,10 +9,74 @@ To implement customer segmentation using K-Means clustering on the Mall Customer
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. 
-2. 
-3. 
-4. 
+Step 1: Start
+
+Step 2: Import Required Libraries
+Import necessary Python libraries:
+
+pandas for data handling
+matplotlib.pyplot and seaborn for visualization
+KMeans from sklearn.cluster for clustering
+StandardScaler for feature scaling
+silhouette_score for evaluation
+
+Step 3: Load the Dataset
+
+Read the dataset file CustomerData.csv using pd.read_csv()
+Display first few rows using head()
+Display column names using columns
+
+Step 4: Select Features
+
+Choose relevant features:
+Age
+Annual Income (k$)
+Spending Score (1-100)
+Store them in variable X
+
+Step 5: Data Preprocessing (Scaling)
+
+Initialize StandardScaler()
+Fit and transform the data using fit_transform()
+Store scaled data in X_scaled
+
+Step 6: Determine Optimal Number of Clusters (Elbow Method)
+
+Initialize empty list wcss
+For values of K from 1 to 10:
+Apply K-Means clustering
+Fit the model on X_scaled
+Compute inertia (WCSS) and append to list
+Plot graph:
+X-axis: Number of clusters
+Y-axis: WCSS
+Identify optimal K (elbow point)
+
+Step 7: Apply K-Means Clustering
+
+Initialize K-Means with chosen clusters (e.g., K = 5)
+Fit model on X_scaled
+
+Step 8: Assign Cluster Labels
+
+Add cluster labels to dataset using kmeans.labels_
+Create a new column Cluster in dataset
+
+Step 9: Evaluate Clustering Performance
+
+Calculate Silhouette Score using silhouette_score()
+Print the score
+
+Step 10: Visualize Clusters
+
+Create scatter plot using seaborn.scatterplot():
+X-axis: Annual Income
+Y-axis: Spending Score
+Hue: Cluster
+Add title, labels, and legend
+Display plot
+
+Step 11: Stop
 
 ## Program:
 ```
